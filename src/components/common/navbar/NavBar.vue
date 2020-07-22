@@ -1,31 +1,50 @@
 <template>
-    <div class="nar-bar">
-      <div class="left"><slot name="left"></slot></div>
-      <div class="center"><slot name="center"></slot></div>
-      <div class="right"><slot name="right"></slot></div>
+ <div class="nav-bar">
+   <div class="left">
+     <slot name="left"></slot>
     </div>
+   <div class="center">
+     <slot name="center"></slot>
+    </div>
+   <div class="right">
+     <slot name="right"></slot>
+    </div>
+ </div>
 </template>
 
 <script>
-    export default {
-        name: "NavBar"
-    }
+ export default {
+   name: '',
+   data () {
+     return {
+
+     }
+   },
+   components: {
+
+   }
+ }
 </script>
 
 <style scoped>
-  .nar-bar {
-    display: flex;
-    line-height: 44px;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(100, 100, 100, 0.1);
-  }
+.nav-bar{
+  display: flex;
+  /* 设置高度 */
+  line-height: 44px;
+  height: 44px;
+  box-shadow: 0 1px 1px rgba(100, 100, 100, .1);
+}
 
-  .left, .right {
-    width: 40px;
-  }
+.left,.right{
+  width: 60px;
+  /* background-color: blue; */
+}
 
-  .center {
-    flex: 1;
-  }
+.center{
+  flex: 1;
+  /* background-color: aqua; */
+  text-align: center;
+}
+
 
 </style>

@@ -10,7 +10,7 @@
 
 <script>
     export default {
-        name: "TarBarItem",
+        name: "TabBarItem",
         props: {
             path: {
                 type: String,

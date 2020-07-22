@@ -1,27 +1,22 @@
 import axios from 'axios'
 
-export function request(config) {
-  const instance = new axios.create({
-    //baseURL:'http://123.207.32.32:8000',
-    baseURL:'http://adi-v3.dev',
+export function request(config){ //success error
+  //创建axios实例
+  const instance = axios.create({
+    baseURL:'http://123.207.32.32:8000',
     timeout:5000
-  });
-
-  // 请求拦截器
-  instance.interceptors.request.use(config => {
-    //拦截后需要将拦截下来的请求数据返回发送
-    return config;
-  }, err => {
-
   })
-
-  // 相应拦截器
-  instance.interceptors.response.use(res => {
-    // 拦截后需要将拦截下来处理成的结果返回
-    return res.data
-  }, err => {
+  //拦截器
+  axios.interceptors.request.use(config => {
+    console.log(config)
+    //比如config中的一些信息不符合服务器的要求
+    //比如每次发送网络请求时，希望显示一个请求图标
+    //某些网络请求必须携带如token，
+    return config
+  },err => {
     console.log(err)
   })
 
-  return instance(config)
+  //发送真正的网络请求
+  instance(config)
 }

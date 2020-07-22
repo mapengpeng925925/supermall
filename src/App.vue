@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <main-tar-bar></main-tar-bar>
+    <router-view/>
+    <main-tab-bar></main-tab-bar>
   </div>
 </template>
 
 <script>
-  import MainTarBar from 'components/contents/maintarbar/MainTarBar'
+  import MainTabBar from 'components/contents/maintabbar/MainTabBar'
   export default {
     name: 'app',
     components: {
-        MainTarBar
+        MainTabBar
     }
   }
 </script>

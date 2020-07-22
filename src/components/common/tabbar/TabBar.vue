@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: "TarBar",
+        name: "TabBar",
     }
 </script>
 
