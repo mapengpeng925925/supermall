@@ -9,7 +9,7 @@
 <script>
 import BScroll from 'better-scroll'
  export default {
-   name: '',
+   name: 'Scroll',
    data () {
      return {
        scroll:null
@@ -35,7 +35,7 @@ import BScroll from 'better-scroll'
      this.scroll.on('scroll',(position)=>{
        this.$emit('scroll',position)
      }),
-     //监听上拉事件
+     //监听上拉底部事件
      this.scroll.on('pullingUp',()=>{
        this.$emit('pullingUp')
      })
@@ -45,10 +45,13 @@ import BScroll from 'better-scroll'
        this.scroll && this.scroll.scrollTo(x,y,time)
      },
      finishPullUp(){
-       this.scroll.finishPullUp()
+       this.scroll && this.scroll.finishPullUp()
      },
      refresh(){
        this.scroll && this.scroll.refresh()
+     },
+     getScrollY(){
+       return this.scroll ? this.scroll.y : 0
      }
    }
  }

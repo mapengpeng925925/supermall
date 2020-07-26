@@ -8,7 +8,7 @@ export function getHomeMultidata(){
 
 export function getHomeGoods(type,page){
   return request({
-    url:'api/n3/home/data',
+    url:'/home/data',
     params:{
       type,
       page
