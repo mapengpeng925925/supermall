@@ -1,5 +1,9 @@
 module.exports = {
+  publicPath:'./',
+  outputDir:'dist',
+  assetsDir:'static',
   configureWebpack: {
+    // outputDir:'dist',
     resolve:{
       extensions:[],
       alias:{
