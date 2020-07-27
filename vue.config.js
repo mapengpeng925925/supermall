@@ -1,7 +1,7 @@
 module.exports = {
   publicPath:'./',
   outputDir:'dist',
-  assetsDir:'static',
+  // assetsDir:'static',
   configureWebpack: {
     // outputDir:'dist',
     resolve:{
